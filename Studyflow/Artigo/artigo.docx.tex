@@ -1,0 +1,193 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% How to use writeLaTeX: 
+%
+% You edit the source code here on the left, and the preview on the
+% right shows you the result within a few seconds.
+%
+% Bookmark this page and share the URL with your co-authors. They can
+% edit at the same time!
+%
+% You can upload figures, bibliographies, custom classes and
+% styles using the files menu.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article}
+
+\usepackage{sbc-template}
+
+\usepackage{graphicx,url}
+
+\usepackage[brazilian]{babel}   
+\usepackage[T1]{fontenc} % Codificação para fontes com suporte a caracteres acentuados
+\usepackage[utf8]{inputenc} % Codificação UTF-8 (necessário apenas para pdflatex)
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{graphicx,url}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{abntex2cite}
+\usepackage{textcomp}
+\usepackage{url}
+\usepackage{enumerate}
+\usepackage{multirow}
+\usepackage{soul}
+\usepackage{verbatim}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage[shortlabels]{enumitem}
+\usepackage{scalefnt} % pacote para diminuir fonte das tabelas
+\usepackage{comment} % pacote de comentarios
+\usepackage{lscape}
+\usepackage{fancyhdr}
+\usepackage{sbgames}
+\usepackage[super]{nth}
+
+%previne hifenização
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+\sloppy
+
+\input{sbgames_info}
+
+\title{StudyFlow:Organização Inteligente para Estudantes \\
+\medskip
+\small{
+    \textit{StudyFlow:Smart Organization for Students}
+}
+}
+
+\author{Alexandre Santos\inst{},Ian Ricardo \inst{},Keyllane Laissa\inst{}, Ramison Santos\inst{},Wendel Tavares\inst{},\\Marcus Vinicios  }
+
+\address{Instituto Federal Do Pará -- Campus Bragança
+  (IFPA)\\
+ Cep: 68.600-000 -- Brangaça -- PA  -- Brasil
+  \email{\{alexandresantos60770,ianricardo691,skeyllane62,ramisonsousa01}
+   \email{\{wenderegivan20\}@gmail.com, ,
+  marcus.brito@ifpa.edu.br}
+}
+
+
+
+\begin{document} 
+
+\maketitle
+
+\thispagestyle{plain}
+
+
+
+
+     
+\begin{resumo} 
+  \textbf{} A tecnologia tem desempenhado um papel fundamental no ambiente educacional, oferecendo ferramentas capazes de auxiliar estudantes na organização e no gerenciamento de suas atividades acadêmicas. Nesse contexto, o presente projeto apresenta o desenvolvimento do aplicativo “StudyFlow”, uma plataforma digital voltada para o planejamento de estudos e aumento da produtividade estudantil. O aplicativo possui funcionalidades como criação de cronogramas, registro de provas e trabalhos, acompanhamento de notas, sistema de lembretes e um modo foco baseado na técnica Pomodoro. O principal objetivo do projeto é oferecer uma solução prática e acessível para auxiliar estudantes na melhoria de sua organização pessoal e desempenho escolar. A metodologia utilizada baseou-se em pesquisas sobre produtividade acadêmica, aplicativos educacionais e técnicas de gerenciamento de tempo. Além disso, foram analisadas plataformas já existentes no mercado para identificar limitações e propor melhorias adaptadas ao ambiente escolar. Espera-se que o aplicativo contribua para o desenvolvimento da disciplina, autonomia e concentração dos estudantes, tornando a rotina de estudos mais eficiente e organizada. 
+\end{resumo}
+
+
+
+    
+  \textbf{}
+
+\palavraschave{tecnologia educacional; produtividade; organização escolar; aplicativo; Pomodoro.}
+
+\section{Introdução}
+Nos últimos anos, a tecnologia passou a ocupar um espaço cada vez mais importante no cotidiano das pessoas, principalmente no ambiente educacional. O avanço dos dispositivos móveis e o aumento do acesso à internet permitiram o desenvolvimento de ferramentas digitais capazes de auxiliar estudantes em diversas atividades acadêmicas, tornando os processos de aprendizagem mais dinâmicos e acessíveis .
+
+A presença da tecnologia no ambiente escolar transformou a maneira como os alunos estudam, pesquisam e organizam suas atividades. Atualmente, smartphones, tablets e computadores fazem parte da rotina da maioria dos estudantes, possibilitando acesso rápido a conteúdos educativos, plataformas digitais e ferramentas de produtividade. Dessa forma, a educação passou a integrar recursos tecnológicos capazes de facilitar tanto o ensino quanto a aprendizagem.
+
+Entretanto, apesar das inúmeras vantagens proporcionadas pela tecnologia, muitos estudantes ainda enfrentam dificuldades relacionadas à organização acadêmica. O excesso de atividades escolares, a grande quantidade de conteúdos e a dificuldade em administrar o tempo fazem com que muitos alunos não consigam manter uma rotina eficiente de estudos. Como consequência, surgem problemas como procrastinação, atraso na entrega de trabalhos, baixo rendimento escolar e aumento do estresse acadêmico~\cite{bacich2018}.
+
+Além disso, o uso excessivo das redes sociais e de aplicativos de entretenimento também contribui significativamente para a perda de foco e redução da produtividade. Muitos estudantes possuem dificuldade em manter a concentração durante os estudos devido às constantes distrações digitais presentes no cotidiano. Embora a tecnologia possa representar um fator de distração, ela também pode ser utilizada como ferramenta de apoio educacional quando aplicada de forma estratégica e funcional.
+
+Segundo \citeonline{moran2018}, a utilização de tecnologias digitais no ensino promove maior autonomia aos alunos, permitindo o desenvolvimento de habilidades relacionadas à responsabilidade, planejamento e gerenciamento de informações. Nesse contexto, aplicativos educacionais tornam-se importantes aliados no processo de aprendizagem, principalmente quando oferecem soluções práticas para auxiliar estudantes na organização de tarefas e gerenciamento do tempo.
+
+Com base nessa realidade, foi desenvolvido o aplicativo “StudyFlow”, uma plataforma digital criada com o objetivo de auxiliar estudantes na organização de suas atividades acadêmicas. O aplicativo reúne funcionalidades como criação de cronogramas de estudos, registro de provas e trabalhos, acompanhamento de notas e lembretes automáticos, permitindo que os usuários organizem melhor sua rotina escolar.
+
+O principal diferencial do projeto é o “Modo Foco”, baseado na técnica Pomodoro. De acordo com \citeonline{cirillo2006}, o método Pomodoro consiste na divisão do tempo em ciclos de concentração de aproximadamente vinte e cinco minutos, seguidos por pequenas pausas para descanso. Essa técnica é amplamente utilizada para melhorar o foco, reduzir distrações e aumentar a produtividade durante os estudos e atividades profissionais.
+
+A técnica Pomodoro tem se destacado por auxiliar estudantes no combate à procrastinação e na criação de hábitos mais saudáveis de estudo. Ao dividir o tempo em pequenos períodos de concentração, o método contribui para diminuir o cansaço mental e tornar as atividades acadêmicas mais organizadas e produtivas. Dessa forma, a integração dessa técnica ao aplicativo torna o StudyFlow uma ferramenta ainda mais eficiente para estudantes.
+
+Outro aspecto importante do projeto é a valorização da autonomia estudantil. Muitas vezes, estudantes dependem exclusivamente de lembretes externos ou orientações constantes para conseguirem organizar suas atividades escolares. O aplicativo busca incentivar maior independência e responsabilidade, permitindo que os próprios alunos gerenciem suas tarefas, metas e horários de estudo.
+
+Além disso, a interface do aplicativo foi planejada para ser moderna, intuitiva e acessível, permitindo que estudantes de diferentes faixas etárias consigam utilizar suas funcionalidades com facilidade. O design visual foi pensado para proporcionar uma experiência agradável ao usuário, utilizando cores suaves e elementos organizados para facilitar a navegação dentro da plataforma.
+
+Outro fator relevante é que o projeto busca demonstrar como a tecnologia pode ser utilizada de maneira positiva no ambiente escolar. Atualmente, muitos jovens utilizam smartphones diariamente, porém nem sempre de forma produtiva. O StudyFlow propõe transformar o celular em uma ferramenta de apoio aos estudos, incentivando o uso consciente da tecnologia e promovendo maior equilíbrio entre entretenimento e produtividade.
+
+Além da organização acadêmica, o aplicativo também busca contribuir para o desenvolvimento de competências importantes para a vida estudantil e profissional, como disciplina, responsabilidade, gerenciamento do tempo e planejamento pessoal. Essas habilidades são fundamentais não apenas para o desempenho escolar, mas também para a formação pessoal dos estudantes.
+
+Segundo \citeonline{bacich2018}, metodologias que integram tecnologia e educação tornam o processo de aprendizagem mais participativo e eficiente. Nesse sentido, o uso de aplicativos educacionais pode contribuir significativamente para aumentar o engajamento dos estudantes e melhorar sua relação com os estudos.
+
+Portanto, este trabalho tem como principal objetivo desenvolver uma solução tecnológica capaz de auxiliar estudantes na organização de suas rotinas acadêmicas, contribuindo para a melhoria da produtividade, concentração e desempenho escolar. O projeto demonstra como a tecnologia pode ser utilizada de forma positiva para apoiar a educação e facilitar o cotidiano estudantil, oferecendo aos alunos uma ferramenta prática, moderna e eficiente para gerenciamento de suas atividades escolares.
+
+\section{Trabalhos Relacionados}
+Atualmente, existem diversos aplicativos e plataformas digitais voltados para organização pessoal, gerenciamento de tarefas e produtividade acadêmica. Essas ferramentas têm como principal objetivo auxiliar usuários no planejamento de horários, administração do tempo e acompanhamento de atividades diárias. Com o crescimento da utilização de dispositivos móveis no ambiente escolar, aplicativos de produtividade passaram a fazer parte da rotina de muitos estudantes.
+
+Entre os aplicativos mais conhecidos está o Google Agenda, uma plataforma desenvolvida pelo Google que permite criar eventos, lembretes e compromissos. Segundo Google (2026), o aplicativo possibilita sincronização em diferentes dispositivos, permitindo que usuários tenham acesso às suas informações em qualquer lugar. A ferramenta é amplamente utilizada tanto em ambientes pessoais quanto profissionais devido à sua praticidade e facilidade de uso.
+
+Outro aplicativo bastante utilizado é o Trello, que utiliza um sistema de quadros e cartões para organização de tarefas e projetos. A plataforma permite que os usuários dividam atividades em categorias, acompanhem prazos e organizem fluxos de trabalho \cite{trello2026}. Sua interface visual facilita a organização de tarefas acadêmicas e projetos em grupo, sendo frequentemente utilizada por estudantes e profissionais.
+
+Além disso, o Notion também se destaca como uma ferramenta moderna de produtividade e gerenciamento de informações. O aplicativo reúne funções como anotações, calendários, tabelas, listas de tarefas e organização de conteúdos em uma única plataforma \cite{notion2026}. Apesar de oferecer diversos recursos avançados, muitos usuários consideram o sistema complexo para utilização cotidiana, principalmente estudantes que buscam soluções mais simples e objetivas.
+
+Outro aplicativo relacionado à produtividade é o Todoist, bastante utilizado para organização de tarefas pessoais e acadêmicas. O sistema permite criar listas de atividades, estabelecer prioridades e definir lembretes automáticos. Ferramentas desse tipo contribuem para melhorar o gerenciamento do tempo e auxiliar estudantes na organização de suas rotinas escolares.
+
+Além dos aplicativos de organização, existem também plataformas específicas voltadas para técnicas de concentração e gerenciamento do tempo, como aplicativos baseados no método Pomodoro. Segundo \citeonline{cirillo2006}, a técnica Pomodoro consiste em dividir o tempo em períodos curtos de concentração, seguidos por pequenas pausas. Esse método tornou-se bastante popular entre estudantes devido à sua eficiência no combate à procrastinação e melhoria do foco durante os estudos.
+
+Aplicativos como Forest e Focus To-Do utilizam princípios semelhantes ao método Pomodoro para incentivar concentração e produtividade. O Forest, por exemplo, utiliza uma mecânica gamificada na qual o usuário “planta árvores virtuais” enquanto permanece focado em suas atividades. Já o Focus To-Do combina gerenciamento de tarefas com temporizadores de foco.
+
+Apesar da existência de diversas ferramentas voltadas para produtividade, muitas delas possuem foco empresarial ou profissional, deixando de atender completamente as necessidades específicas do ambiente escolar. Grande parte dos aplicativos apresenta excesso de funcionalidades complexas ou ausência de recursos importantes para estudantes, como acompanhamento de notas, controle de disciplinas e gerenciamento de provas e trabalhos.
+
+Nesse contexto, o aplicativo StudyFlow diferencia-se por reunir em uma única plataforma funcionalidades voltadas especificamente para estudantes. O aplicativo combina organização acadêmica, gerenciamento de tarefas escolares, acompanhamento de notas e técnicas de produtividade baseadas no método Pomodoro.
+
+Outro diferencial importante do projeto é sua proposta de simplicidade e acessibilidade. Enquanto muitos aplicativos existentes apresentam interfaces complexas e sobrecarregadas de informações, o StudyFlow busca oferecer uma experiência intuitiva, organizada e de fácil utilização para estudantes de diferentes faixas etárias.
+
+Além disso, o aplicativo propõe incentivar hábitos saudáveis de estudo, promovendo disciplina, responsabilidade e planejamento acadêmico. A integração entre organização escolar e técnicas de foco representa um aspecto inovador dentro da proposta do projeto, tornando-o mais adequado para o cotidiano estudantil.
+
+Segundo \citeonline{bacich2018}, ferramentas digitais utilizadas no ambiente educacional podem contribuir significativamente para aumentar o engajamento dos estudantes e melhorar o processo de aprendizagem. Dessa forma, o desenvolvimento do StudyFlow busca demonstrar como a tecnologia pode ser aplicada de maneira positiva na educação, oferecendo soluções práticas para auxiliar alunos em sua rotina acadêmica.
+
+Portanto, a análise dos trabalhos relacionados permitiu identificar características importantes presentes em aplicativos de produtividade já existentes, além de compreender suas limitações no contexto educacional. Com base nessas observações, o projeto StudyFlow foi desenvolvido com o objetivo de oferecer uma solução mais adaptada às necessidades dos estudantes, integrando organização acadêmica, gerenciamento de tempo e técnicas de concentração em uma única plataforma.
+
+\section{Metodologia}
+O desenvolvimento do projeto “StudyFlow” foi realizado por meio de pesquisas bibliográficas, análises de aplicativos de produtividade e planejamento das funcionalidades voltadas para o ambiente acadêmico. A metodologia utilizada teve como objetivo compreender as principais dificuldades enfrentadas pelos estudantes na organização de suas atividades escolares e propor uma solução tecnológica prática e acessível.
+
+Inicialmente, foi realizada uma etapa de levantamento de informações sobre os desafios presentes no cotidiano estudantil. Durante essa fase, observou-se que muitos alunos possuem dificuldades relacionadas à administração do tempo, organização de tarefas, concentração durante os estudos e acompanhamento de atividades escolares. Problemas como esquecimento de trabalhos, atraso em entregas e excesso de distrações digitais tornaram-se fatores relevantes para o desenvolvimento do projeto.
+
+Após a identificação do problema, foram realizadas pesquisas bibliográficas sobre produtividade acadêmica, metodologias de estudo e tecnologias aplicadas à educação. Segundo \citeonline{moran2017tecnologias}, o uso de ferramentas digitais no ambiente educacional pode favorecer maior autonomia e participação dos estudantes no processo de aprendizagem. Além disso, estudos sobre metodologias ativas demonstram que a integração entre tecnologia e educação contribui para tornar o ensino mais dinâmico e eficiente \cite{bacich2018}.
+
+Em seguida, foi realizada uma análise de aplicativos já existentes no mercado, com o objetivo de compreender suas funcionalidades, vantagens e limitações. Foram analisadas plataformas como Google Agenda, Trello, Notion, Todoist e aplicativos baseados na técnica Pomodoro. Essa etapa permitiu identificar características importantes que poderiam ser incorporadas ao projeto, além de limitações que poderiam ser melhoradas no desenvolvimento do StudyFlow.
+
+Durante a análise dos aplicativos, observou-se que muitas ferramentas apresentam foco empresarial ou profissional, não atendendo completamente às necessidades específicas dos estudantes. Além disso, diversos aplicativos possuem interfaces complexas ou excesso de funcionalidades, dificultando sua utilização por alunos que buscam soluções simples e intuitivas para organização escolar.
+
+Com base nas informações coletadas, foi iniciado o planejamento das funcionalidades do aplicativo. Nessa etapa, foram definidos os principais recursos que fariam parte da plataforma, incluindo cronograma de estudos, sistema de lembretes automáticos, calendário acadêmico, acompanhamento de notas e o “Modo Foco” baseado na técnica Pomodoro.
+
+A escolha da técnica Pomodoro ocorreu devido à sua popularidade e eficiência no gerenciamento do tempo. Segundo \citeonline{cirillo2006}, o método consiste em dividir o tempo em ciclos curtos de concentração seguidos por pequenas pausas, contribuindo para redução da procrastinação e aumento da produtividade. Dessa forma, a técnica foi integrada ao aplicativo como uma ferramenta de apoio à concentração dos estudantes.
+
+Após o planejamento funcional, iniciou-se a etapa de criação visual das telas do aplicativo. O design foi desenvolvido com foco na simplicidade, acessibilidade e organização visual, buscando proporcionar uma experiência agradável ao usuário. Foram utilizadas cores suaves, ícones intuitivos e uma estrutura organizada para facilitar a navegação dentro do aplicativo.
+
+A elaboração das telas buscou atender principalmente ao público jovem, considerando elementos visuais modernos e uma interface prática. Entre as telas planejadas estão a tela inicial, área de cronograma, calendário de provas, acompanhamento de notas, perfil do usuário e o modo foco.
+
+Além do aspecto visual, também foi pensado o funcionamento prático do aplicativo no cotidiano escolar. O objetivo foi desenvolver uma ferramenta que pudesse ser facilmente utilizada pelos estudantes em suas rotinas acadêmicas, auxiliando no planejamento das atividades e incentivando hábitos mais produtivos de estudo.
+
+Outra etapa importante da metodologia foi a elaboração da proposta conceitual do projeto. Nessa fase, foram definidos os objetivos gerais e específicos do aplicativo, bem como seus principais diferenciais em relação aos aplicativos já existentes. O StudyFlow foi planejado para unir organização acadêmica e produtividade em uma única plataforma, oferecendo uma solução mais adaptada ao ambiente escolar.
+
+Também foi realizada a produção da apresentação visual do projeto, demonstrando as principais funcionalidades e telas desenvolvidas. Essa etapa teve como finalidade apresentar de maneira clara o funcionamento do aplicativo e destacar os benefícios que ele pode proporcionar aos estudantes.
+
+Por fim, o desenvolvimento do projeto permitiu compreender a importância da tecnologia como ferramenta de apoio à educação. A pesquisa demonstrou que aplicativos educacionais podem contribuir significativamente para melhorar a organização acadêmica, aumentar a produtividade e incentivar maior autonomia estudantil.
+
+Dessa forma, a metodologia aplicada no desenvolvimento do StudyFlow possibilitou unir conhecimentos sobre tecnologia, produtividade e educação para criar uma proposta de aplicativo funcional, moderna e voltada às necessidades reais dos estudantes.\textbf{one}-page texts.
+
+
+
+\section{Imagens}
+
+\begin{center}
+\includegraphics[width=0.999\textwidth]{Figuras/telas (1).pdf}
+
+\end{center}
+
+\section{Referencias}~\citeonline{bacich2018,de2025tecnicas,moran2017tecnologias}.
+
+
+\bibliography{biblio}
+\end{document}
